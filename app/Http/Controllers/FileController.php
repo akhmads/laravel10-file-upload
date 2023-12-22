@@ -15,7 +15,7 @@ class FileController extends Controller
      */
     public function index(): View
     {
-        return view('fileUpload');
+        return view('file-upload');
     }
 
     /**
