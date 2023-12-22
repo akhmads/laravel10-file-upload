@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\FileUploadController;
+use App\Http\Controllers\FileController;
 
 /*
 |--------------------------------------------------------------------------
@@ -18,5 +18,5 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('file-upload', [FileUploadController::class, 'index'])->name('fileUpload');
-Route::post('file-upload', [FileUploadController::class, 'store'])->name('fileUpload.store');
+Route::get('file-upload', [FileController::class, 'index'])->name('file.index');
+Route::post('file-upload', [FileController::class, 'store'])->name('file.store');
