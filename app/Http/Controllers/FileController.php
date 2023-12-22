@@ -26,7 +26,7 @@ class FileController extends Controller
     public function store(Request $request): RedirectResponse
     {
         $request->validate([
-            'file' => 'required|mimes:pdf,xlx,csv|max:2048',
+            'file' => 'required|mimes:pdf,xlsx,xls,csv|max:2048',
         ]);
 
         $fileName = time().'.'.$request->file->extension();
